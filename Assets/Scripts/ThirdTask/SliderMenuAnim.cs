@@ -3,7 +3,6 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class SliderMenuAnim : MonoBehaviour
 {
-    [SerializeField] GameObject MenuPanel;
     private Animator animator;
     private bool isOpened;
 
