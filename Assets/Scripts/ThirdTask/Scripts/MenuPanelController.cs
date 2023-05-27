@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-public class ToggleController : MonoBehaviour
+public class MenuPanelController : MonoBehaviour
 {
     private NoteToggle[] noteToggles;
     private VisibilityToggle[] visibilityToggles;
@@ -21,14 +21,13 @@ public class ToggleController : MonoBehaviour
         ChangeTogglesStatement(isClicked, visibilityToggles);
 
     }
-
     private void ChangeTogglesStatement(bool isClicked, UserToggle[] togglesArray)
     {
         if (isClicked)
         {
             foreach (var item in togglesArray)
             {
-                item.SetToggleStatement( true);
+                item.SetToggleStatement(true);
             }
         }
         else
@@ -39,5 +38,4 @@ public class ToggleController : MonoBehaviour
             }
         }
     }
-
 }
