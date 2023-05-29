@@ -8,7 +8,6 @@ public abstract class UserToggle : MonoBehaviour
     {
         get => toggle.isOn;
     }
-
     
     public virtual void SetToggleStatement(bool isClicked)
     {

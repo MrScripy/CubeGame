@@ -3,6 +3,7 @@ using UnityEngine;
 public class FinishScript : MonoBehaviour
 {
     [SerializeField] GameObject winPanel;
+
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.CompareTag("Player"))

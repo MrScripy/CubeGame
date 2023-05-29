@@ -9,7 +9,7 @@ public class MenuPanelController : MonoBehaviour
     void Start()
     {
         noteToggles = GetComponentsInChildren<NoteToggle>();
-        visibilityToggles = GetComponentsInChildren<VisibilityToggle>();
+        visibilityToggles = GetComponentsInChildren<VisibilityToggle>();        
     }
 
     public void OnNoteHeaderToggleClick(bool isClicked)

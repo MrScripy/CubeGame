@@ -2,16 +2,14 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    #region Fields
     [SerializeField] float speed = 5f;
     [SerializeField] Transform orientation;
-
 
     [SerializeField] private Transform GroundCheck;
     [SerializeField] private float checkRadius = 0.5f;
     [SerializeField] private LayerMask Ground;
     [SerializeField] float jumpForce = 350f;
-
-
 
     private Rigidbody rb;
     private float horizontalInput;
@@ -19,14 +17,13 @@ public class PlayerMovement : MonoBehaviour
     private bool onGround;
     private Vector3 moveDirection;
 
-
+    #endregion
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
     }
-
 
     void Update()
     {
@@ -39,7 +36,6 @@ public class PlayerMovement : MonoBehaviour
     {
         Move();
     }
-
 
     private void MyInput()
     {
@@ -61,5 +57,4 @@ public class PlayerMovement : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(GroundCheck.position, checkRadius, Ground);
         onGround = colliders.Length > 0 ? true : false;
     }
-
 }

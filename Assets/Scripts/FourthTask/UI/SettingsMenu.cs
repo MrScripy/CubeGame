@@ -7,7 +7,6 @@ public class SettingsMenu : MonoBehaviour
     [SerializeField] private TMP_Dropdown resolutionsDropdown;
     private Resolution[] resolutions;
 
-
     private void Start()
     {
         resolutions = Screen.resolutions;
@@ -34,7 +33,6 @@ public class SettingsMenu : MonoBehaviour
         resolutionsDropdown.RefreshShownValue();
     }
 
-    
     public void SetQuality(int qualitIndex)
     {
         QualitySettings.SetQualityLevel(qualitIndex);

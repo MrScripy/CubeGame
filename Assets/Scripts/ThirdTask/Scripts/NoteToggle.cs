@@ -7,11 +7,11 @@ public class NoteToggle : UserToggle
     [SerializeField] GameObject notedGameObj;
     [SerializeField] Slider transparencySlider;
     private Material material;
+
     private void Start()
     {
         toggle = GetComponent<Toggle>(); 
-        material = notedGameObj.GetComponent<Renderer>().material;
-        
+        material = notedGameObj.GetComponent<Renderer>().material;        
     }
     public void OnNotedToggleClick(bool isClicked)
     {
@@ -23,7 +23,6 @@ public class NoteToggle : UserToggle
         {
             transparencySlider.onValueChanged.RemoveListener(ChangeTransparency);
         }
-
     }
 
     private void ChangeTransparency(float value)

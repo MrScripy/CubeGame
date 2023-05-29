@@ -1,16 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ThirdPersCam : MonoBehaviour
 {
+    #region Fields
     [SerializeField] Transform orientation;
     [SerializeField] Transform player;
     [SerializeField] Transform playerObj;
     [SerializeField] Rigidbody rb;
     [SerializeField] float rotationSpeed;
+    #endregion
 
     void Update()
+    {
+        ControllCamera();
+    }
+
+    private void ControllCamera()
     {
         Vector3 viewDir = player.position - new Vector3(transform.position.x, player.position.y, transform.position.z);
         orientation.forward = viewDir.normalized;
